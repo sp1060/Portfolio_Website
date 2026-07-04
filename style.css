@@ -1,0 +1,432 @@
+/* Modern High-Contrast Cyberpunk Palette & Variables */
+:root {
+    --neon-cyan: #00f2fe;
+    --neon-purple: #9d4edd;
+    --bg-black: #05070c;
+    --card-dark: #0b0f19;
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text-white: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-coral: #ff6b6b;
+    --success-green: #00ff66;
+    --glow: 0 0 25px rgba(0, 242, 254, 0.15);
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* 👑 Premium Header Banner Components */
+.header-banner {
+    width: 100%;
+    max-width: 1000px;
+    background: linear-gradient(180deg, rgba(0, 242, 254, 0.04) 0%, rgba(0,0,0,0) 100%);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 45px 20px;
+    text-align: center;
+    margin-bottom: 35px;
+    box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.01);
+}
+
+.header-banner h1 {
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
+    letter-spacing: -1.5px;
+    margin-bottom: 12px;
+}
+
+/* 🔄 The Dynamic Full-Sentence Auto-Erasing Subtitle Engine */
+.subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--neon-cyan);
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    min-height: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dynamic-sentence {
+    position: relative;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.dynamic-sentence::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-black);
+    border-left: 2px solid var(--neon-cyan);
+    animation: fullLineMask 6s infinite alternate ease-in-out;
+}
+
+.dynamic-sentence::after {
+    content: "Architecting High-Performance Digital Experiences";
+    animation: sentenceSwitcher 18s infinite steps(1);
+}
+
+/* 📊 Metric Counters / Status Badges */
+.badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.badge {
+    display: inline-flex;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.badge-label {
+    background: #1e2228;
+    color: #94a3b8;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-value {
+    padding: 5px 12px;
+    color: #fff;
+}
+.bg-cyan { background: #00b4d8; }
+.bg-purple { background: #7209b7; }
+.bg-coral { background: var(--accent-coral); }
+
+/* External Fast Links Grid Row */
+.links-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.links-row a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+}
+
+.links-row a:hover {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
+}
+
+/* Global Layout Framework Core Grid Elements */
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.grid-two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
+@media (max-width: 500px) {
+    .grid-two { grid-template-columns: 1fr; }
+}
+
+/* 📄 Content Section Card Styling Layouts */
+.content-card {
+    background: var(--card-dark);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.content-card:hover {
+    border-color: rgba(0, 242, 254, 0.3);
+    box-shadow: var(--glow);
+}
+
+h2.section-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 4px solid var(--neon-cyan);
+    padding-left: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-inner-block {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.card-inner-block:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.block-title {
+    font-size: 1.15rem;
+    color: var(--neon-cyan);
+    font-weight: 600;
+}
+
+.block-meta {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.block-subtitle {
+    font-size: 0.95rem;
+    color: var(--neon-purple);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+ul.bullet-list {
+    list-style: none;
+    padding-left: 5px;
+}
+
+ul.bullet-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+}
+
+ul.bullet-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--neon-cyan);
+}
+
+.text-highlight {
+    color: var(--success-green);
+    font-weight: bold;
+}
+
+/* 🛠️ Modern Tech Arsenal Grid Components Layout */
+.tech-category {
+    margin-bottom: 20px;
+}
+
+.tech-category h4 {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--neon-cyan);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-family: monospace;
+    transition: transform 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.tech-tag:hover {
+    transform: scale(1.05);
+    background: rgba(0, 242, 254, 0.08);
+    border-color: var(--neon-cyan);
+}
+
+/* 📚 Coursework Tags Matrix Layout */
+.coursework-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.course-tag {
+    background: rgba(157, 78, 221, 0.06);
+    border: 1px solid rgba(157, 78, 221, 0.2);
+    color: #c77dff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Contact Section Details Layout Card */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-item {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.03);
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.contact-label {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+/* 🤖 Interactive AI Query Interface Hub Styles */
+.ai-chat-section {
+    background: radial-gradient(circle at top left, rgba(157, 78, 221, 0.05), transparent), var(--card-dark);
+    border: 1px solid rgba(157, 78, 221, 0.25);
+}
+
+.chat-input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.chat-input-wrapper input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-white);
+    font-family: monospace;
+    font-size: 0.95rem;
+}
+
+.chat-input-wrapper button {
+    background: var(--neon-purple);
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.chat-input-wrapper button:hover {
+    opacity: 0.9;
+}
+
+.ai-response-box {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border-left: 3px solid var(--neon-purple);
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    display: none;
+}
+
+.suggested-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.suggest-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.suggest-btn:hover {
+    border-color: var(--neon-purple);
+    color: white;
+}
+
+/* 🔏 Footer notice layout rules */
+.footer-copyright {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.25);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* 🎬 Keyframe Animation Engine Timelines */
+@keyframes fullLineMask {
+    0%, 8%     { width: 100%; }
+    45%, 55%   { width: 0%; }
+    92%, 100%  { width: 100%; }
+}
+
+@keyframes sentenceSwitcher {
+    0%, 33.33% { content: "Architecting High-Performance Digital Experiences"; }
+    33.34%, 66.66% { content: "Crafting Intelligent Automation Solutions via AI"; }
+    66.67%, 100% { content: "Engineering Data Integrity at IIT Jodhpur"; }
+}
